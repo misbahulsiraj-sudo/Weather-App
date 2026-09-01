@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+
+        .weather-app {
+            width: 360px;
+            padding: 30px;
+            text-align: center;
+            color: white;
+            background: rgba(255, 255, 255, 0.18);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
+        .search-box {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+
+        .search-box button {
+            padding: 12px 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .weather-icon {
+            font-size: 65px;
+            margin: 10px 0;
+        }
+
+        .temperature {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .condition {
+            font-size: 20px;
+            margin: 8px 0 25px;
+        }
+
+        .details {
+            display: flex;
+            gap: 8px;
+        }
+
+        .detail-box {
+            flex: 1;
+            padding: 12px 5px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+        }
+
+        .detail-box span {
+            display: block;
+            font-size: 12px;
+            margin: 5px 0;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="weather-app">
+
+        <h1>🌤️ Weather App</h1>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter city name"
+            >
+
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div class="weather-icon" id="weatherIcon">☀️</div>
+
+        <div class="temperature" id="temperature">28°C</div>
+
+        <div class="condition" id="condition">
+            Clear Sky
+        </div>
+
+        <div class="details">
+
+            <div class="detail-box">
+                💧
+                <span>Humidity</span>
+                <strong id="humidity">65%</strong>
+            </div>
+
+            <div class="detail-box">
+                💨
+                <span>Wind</span>
+                <strong id="wind">12 km/h</strong>
+            </div>
+
+            <div class="detail-box">
+                🌡️
+                <span>Feels Like</span>
+                <strong id="feelsLike">30°C</strong>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            Search any city to check the weather
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
