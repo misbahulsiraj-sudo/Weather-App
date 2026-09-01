@@ -1,4 +1,4 @@
-# Weather App
+# ⛅ Weather App
 
 A simple and responsive real-time weather application built with HTML, CSS, and JavaScript.
 
